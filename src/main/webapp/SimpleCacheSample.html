@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Cache Service Sample</title>
+<body  bgcolor="lightblue" onload="load()">
+
+<script language="javascript" type="text/javascript">
+function load(){	
+  document.getElementById('get').addEventListener("click", getClicked, false);
+  document.getElementById('put').addEventListener("click", putClicked, false);
+  document.getElementById('delete').addEventListener("click", deleteClicked, false);
+}
+
+function sendRequest(operation) {
+	var ajaxRequest;  
+	var key = encodeURIComponent(document.getElementById('key').value);
+	var value = encodeURIComponent(document.getElementById('value').value);
+	
+	ajaxRequest = new XMLHttpRequest();
+	ajaxRequest.onreadystatechange = function(){
+		if(ajaxRequest.readyState == 4){
+			var result = ajaxRequest.responseText;
+			document.getElementById('value').value=result;
+        }
+	}
+	
+	ajaxRequest.open("GET", "cachesample.jsp?operation="+operation+"&key="+key+"&value="+value, true);
+	ajaxRequest.send(null); 
+}
+
+function getClicked() {
+  sendRequest('get');
+}
+function putClicked() {
+  sendRequest('put');
+}
+function deleteClicked() {  
+  sendRequest('delete');
+}
+</script>
+
+    <h3>Grid Operations:</h3> 
+	Key:&nbsp;&nbsp;&nbsp;<input id="key" type='text' name='key' /> <br>
+	Value:&nbsp;<input id='value' type="text" name='value' /><br><br>
+	<button id='get'>get</button>
+	<button id='put'>put</button>
+	<button id='delete'>delete</button><br>
+	
+</body>
+</html>
