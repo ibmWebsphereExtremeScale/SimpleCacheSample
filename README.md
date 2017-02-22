@@ -1,10 +1,10 @@
 # About The Application
-This is Java web application meant to be a simple demo of how you can integrate Websphere eXtreme Scale into your client applications and use the simple cache.Using this application, you can perform basic operations such as PUT, GET and DELETE on a Websphere eXtreme Scale simple grid
+This is a Java web application meant to be a simple demo of how you can integrate Websphere eXtreme Scale into your client applications and use a simple cache. Using this application, you can perform basic operations such as PUT, GET and DELETE on a Websphere eXtreme Scale simple grid
 
 # Requirements 
 - Websphere eXtreme Scale Liberty Deployment (XSLD) 8.6.1.1 (Download the trial version from: https://www.ibm.com/developerworks/downloads/ws/wsdg/index.html) 
     - Follow instructions provided to setup your XSLD instance 
-    - Create a grid of type Simple on XSLD 
+    - Create a grid of type Simple on XSLD
 
 - Apache Maven software project management and comprehension tool (Download link: https://maven.apache.org/download.cgi) 
    - Installation Instructions: (https://maven.apache.org/install.html)
