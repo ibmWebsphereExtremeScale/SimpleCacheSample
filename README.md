@@ -40,7 +40,10 @@ The sample application uses two dependencies: A JSON library and ogclient.jar
     
     //To uncomment, remove '<!--' at the beginning and '-->' at the end of the block of code
     ```
-    b) Download ogclient.jar from https://hub.jazz.net/manage/manager/project/abchow/CachingSamples/overview?       utm_source=dw#https://hub.jazz.net/project/abchow/CachingSamples/abchow%2520%257C%2520CachingSamples/_2fYdgJMyEeO3qtc4gZ02Xw/_2fl44JMyE eO3qtc4gZ02Xw/downloads
+    b) Download ogclient.jar from 
+     ```
+	https://hub.jazz.net/manage/manager/project/abchow/CachingSamples/overview?utm_source=dw#https://hub.jazz.net/project/abchow/CachingSamples/abchow%2520%257C%2520CachingSamples/_2fYdgJMyEeO3qtc4gZ02Xw/_2fl44JMyEeO3qtc4gZ02Xw/downloads
+    ```
     and add it to your local repository by running the following maven command
 
     ```
