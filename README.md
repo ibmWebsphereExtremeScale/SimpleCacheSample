@@ -27,7 +27,7 @@ The sample application uses two dependencies: A JSON library and ogclient.jar
 
 - The JSON library is specified as a dependency in the POM file, Maven will download this library and package it into the final artifact
 
-- The ogclient.jar is NOT available in a public Maven repository. If you are using the Java buildpack to deploy the app, you have to follow these two steps: 
+- The ogclient.jar is NOT available in a public Maven repository. If you are not using the default Liberty Buildpack to deploy the app, you have to follow these two steps. The instructions in this document does use the default Liberty Buildpack. 
     a) Edit the POM.xml file, uncomment the following block of code 
     ```
     <!--
@@ -96,10 +96,9 @@ cf cups <service-name> -p <path to/credentials.json file>
 ```
 
 # Running The Application (UNDER CONSTRUCTION) 
- Once you have successfully logged in, let's push the WAR file to your Bluemix account with a Java Buildpack
-
+ Once you have successfully logged in, let's push the WAR file to your Bluemix account with the default Liberty Buildpack on Bluemix
 ```
-cf push <app name> -p SimpleCacheSample.war -b https://github.com/cloudfoundry/java-buildpack
+cf push <app name> -p SimpleCacheSample.war 
 
 // If you get an error message about hostname being taken, this means that the app name was taken by someone else
 Try this step again with a new app name
