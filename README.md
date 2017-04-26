@@ -95,7 +95,7 @@ cf cups <service-name> -p <path to/credentials.json file>
 //Replace <service-name> with any name of your choosing but service name must have 'XSSimple' as the prefix. For example:XSSimple-credentials***
 ```
 
-# Running The Application (UNDER CONSTRUCTION) 
+# Running The Application
  Once you have successfully logged in, let's push the WAR file to your Bluemix account with the default Liberty Buildpack on Bluemix
 ```
 cf push <app name> -p SimpleCacheSample.war 
